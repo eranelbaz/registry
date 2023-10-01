@@ -31,4 +31,4 @@ jobs:
         run: |
           terraform init
           terraform workspace select elbaz
-          terraform apply -var="github_api_token=${{ secrets.API_TOKEN }} " -var="route53_zone_id=Z00817091582026MN9AUQ" -var="domain_name=elbaz.env0-reg.opentf.org" -auto-approve
+          terraform apply -var="github_api_token=${{ github.token }} " -var="route53_zone_id=Z00817091582026MN9AUQ" -var="domain_name=elbaz.env0-reg.opentf.org" -auto-approve
