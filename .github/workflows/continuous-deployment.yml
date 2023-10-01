@@ -24,11 +24,11 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::743518529013:role/GithubActions-AssumeRoleWithAction-Registry
+          role-to-assume: arn:aws:iam::326535729404:role/github-oidc-permissions-elbaz-Role-DCV4LZ6IXG79
           aws-region: eu-west-1
 
       - name: Run terraform
         run: |
           terraform init
-          terraform workspace select dev
+          terraform workspace select elbaz
           terraform apply -auto-approve
